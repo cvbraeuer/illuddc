@@ -87,7 +87,4 @@ while True:
         spargs = ['ddcutil', '--sleep-multiplier', '.1', 'setvcp', ddcattr, str(brightness_cur)]
         subprocess.call(spargs)
 
-    #spargs = ['ddcutil', '--sleep-multiplier', '.5', 'setvcp', ddcattr, str(brightness_target)]
-    #subprocess.call(spargs)
-    # set display brightness via ddcutil and go to sleep
     time.sleep(interval)
