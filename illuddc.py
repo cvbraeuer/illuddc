@@ -70,9 +70,6 @@ while True:
     except:
         continue
 
-    print(brightness_cur)
-    print(brightness_target)
-    
     # do nothing if brightness stays the same
     if brightness_cur == brightness_target:
         time.sleep(interval)
@@ -80,10 +77,8 @@ while True:
 
     # smooth brightness transition
     steps = brightness_target-brightness_cur
-    print(steps)
     for i in range(0, abs(steps)):
         brightness_cur += -1 if steps < 0 else 1
-        print(brightness_cur)
         spargs = ['ddcutil', '--sleep-multiplier', '.1', 'setvcp', ddcattr, str(brightness_cur)]
         subprocess.call(spargs)
 
