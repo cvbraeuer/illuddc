@@ -1,2 +1,2 @@
 # illuddc
-automatically control display brightness based on ambient brightness
+Adaptive control of external display brightness based on ambient brightness using the Home Assistant REST API and ddcutil
